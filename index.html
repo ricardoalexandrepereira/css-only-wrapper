@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        .wrapper{
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        h1{
+            text-align: center;
+            margin: 60px 0 40px 0;
+            font-size: 1.5em;
+            color:rebeccapurple;
+            text-transform: uppercase;
+        }
+        .lista-item{
+            background-color: aliceblue;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            padding: 10px;
+            box-shadow: 0 2px 6px rgba(50, 50, 90, .1);
+            
+        }
+        .titulo{
+            cursor: pointer;
+            padding: 10px;
+            font-size: 1.4em;
+            font-family: monospace;
+            color:rebeccapurple;
+        }
+        .titulo::after{
+            content: '+';
+            float: right;
+            transition: transform 0.3s ease;
+        }
+        .titulo::before{
+            content:'';
+            display: inline-block;
+            min-height: 12px;
+            width: 24px;
+            margin-right: 10px;
+            background-color: #BEB0F4;
+        }
+        .conteudo{
+            padding: 10px;
+            color:rgb(41, 41, 54);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: .87em;
+            line-height: 1.4em;
+            display: none;
+            transition: 1s ease;
+        }
+        .trigger-input{
+            display: none;
+        }
+        .trigger-input:checked + .trigger-wrapper .conteudo{
+            
+            display: block;
+            
+
+            
+        }
+        
+        .trigger-input:checked + .trigger-wrapper .titulo::after{
+            transform: rotate(45deg) scale(1.8);
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>css only</h1>
+        <div class="lista-item">
+            <input type="checkbox" class="trigger-input" id="titulo1">
+            <div class="trigger-wrapper">
+                <label for="titulo1">
+                    <h2 class="titulo">titulo</h2>
+                </label><!--for igual ao id-->
+                <p class="conteudo">Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Numquam minus nesciunt 
+                    ullam optio reiciendis nemo molestias ea, 
+                    quam dolores sapiente, ab voluptatum autem</p>
+
+            </div>
+        </div>
+
+        
+        <div class="lista-item">
+            <input type="checkbox" class="trigger-input" id="titulo2">
+            <div class="trigger-wrapper">
+                <label for="titulo2">
+                    <h2 class="titulo">titulo</h2>
+                </label><!--for igual ao id-->
+                <p class="conteudo">Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Numquam minus nesciunt 
+                    ullam optio reiciendis nemo molestias ea, 
+                    quam dolores sapiente, ab voluptatum autem</p>
+
+            </div>
+        </div>
+
+        
+        <div class="lista-item">
+            <input type="checkbox" class="trigger-input" id="titulo3">
+            <div class="trigger-wrapper">
+                <label for="titulo3">
+                    <h2 class="titulo">titulo</h2>
+                </label><!--for igual ao id-->
+                <p class="conteudo">Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Numquam minus nesciunt 
+                    ullam optio reiciendis nemo molestias ea, 
+                    quam dolores sapiente, ab voluptatum autem</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
